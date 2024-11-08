@@ -73,6 +73,24 @@ async function displayData() {
             cartItselfProductItselfName[i].textContent = productData[i].name;
             cartItselfProductItselfPrice[i].textContent = '$' + productData[i].price.toFixed(2);
             cartItselfProductItselfOverallPrice[i].textContent = '$' + productData[i].price.toFixed(2);
+
+
+            // DELETE A PRODUCT BUTTON
+            cartItselfProductItselfDeleteButton[i].addEventListener('click', () => {
+                cartItselfProductItself[i].classList.remove('cart-itself-product-itself-active');
+                cartItselfProductDivider[i].classList.remove('cart-itself-product-divider-active');
+
+                productItselfAddToCartButton[i].style.display = 'flex';
+                productItselfIcrementDecrementButtonsContainer[i].style.display = 'none';
+
+                // NUMBER OF PRODUCTS TEXT
+                numberOfProducts--;
+                cartItselfNumberOfProductsText.textContent = numberOfProducts;
+                if (numberOfProducts === 0) {
+                    cartItselfEmptyContainer.style.display = 'flex';
+                    cartItselfProductContainer.style.display = 'none';
+                };
+            });
         });
 
 
