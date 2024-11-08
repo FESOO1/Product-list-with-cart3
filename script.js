@@ -10,6 +10,13 @@ const productItselfTextCategory = document.querySelectorAll('.product-itself-tex
 const productItselfTextName = document.querySelectorAll('.product-itself-text-name');
 const productItselfTextPrice = document.querySelectorAll('.product-itself-text-price');
 
+// CART
+const cartItselfEmptyContainer = document.querySelector('.cart-itself-empty');
+const cartItselfProductContainer = document.querySelector('.cart-itself-product-container');
+const cartConfirmOrderButton = document.querySelector('.cart-itself-product-confirm-order-button');
+const cartItselfNumberOfProductsText = document.getElementById('cartItselfNumberOfProductsText');
+let numberOfProducts = 0;
+
 // DISPLAYING DATA
 
 window.addEventListener('DOMContentLoaded', displayData);
@@ -38,6 +45,15 @@ for (let i = 0; i < productItselfAddToCartButton.length; i++) {
         isAddedToCart = true;
         productItselfAddToCartButton[i].style.display = 'none';
         productItselfIcrementDecrementButtonsContainer[i].style.display = 'flex';
+
+        // NUMBER OF PRODUCTS TEXT
+        numberOfProducts++;
+        cartItselfNumberOfProductsText.textContent = numberOfProducts;
+        
+        // DISPLAYING THE PRODUCT IN THE CART
+        cartItselfEmptyContainer.style.display = 'none';
+        cartItselfProductContainer.style.display = 'flex';
+
     });
 
 
