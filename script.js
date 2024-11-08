@@ -27,3 +27,15 @@ async function displayData() {
         productItselfTextPrice[i].textContent = '$'  + productData[i].price.toFixed(2);
     };
 };
+
+// BUTTONS
+
+for (let i = 0; i < productItselfAddToCartButton.length; i++) {
+    // PRODUCT ADD TO CART BUTTON
+    let isAddedToCart = false;
+    productItselfAddToCartButton[i].addEventListener('click', () => {
+        isAddedToCart = true;
+        productItselfAddToCartButton[i].style.display = 'none';
+        productItselfIcrementDecrementButtonsContainer[i].style.display = 'flex';
+    });
+};
