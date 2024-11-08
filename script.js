@@ -49,6 +49,10 @@ for (let i = 0; i < productItselfAddToCartButton.length; i++) {
         if (productCounter > 1) {
             productCounter--;
             productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+        } else {
+            isAddedToCart = false;
+            productItselfAddToCartButton[i].style.display = 'flex';
+            productItselfIcrementDecrementButtonsContainer[i].style.display = 'none';
         };
     });
 
