@@ -152,6 +152,8 @@ body {
 
 .product-itself-buttons-decrement-button-svg {
     color: white;
+    width: 20px;
+    height: 20px;
 }
 
 .product-itself-buttons-decrement-button:hover {
@@ -168,6 +170,34 @@ body {
     color: white;
     font-weight: 500;
     font-size: 1.2rem;
+}
+
+/* INCREMENT NUMBER BUTTON */
+
+.product-itself-buttons-increment-button {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.product-itself-buttons-increment-button-svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.product-itself-buttons-increment-button:hover {
+    background-color: white;
+}
+
+.product-itself-buttons-increment-button:hover .product-itself-buttons-increment-button-svg {
+    color: hsl(14, 86%, 42%);
 }
 
 /*
