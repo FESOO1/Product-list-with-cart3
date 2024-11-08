@@ -106,10 +106,6 @@ async function displayData() {
                 totalPriceOfOneProduct = productCounter * productData[i].price;
                 cartItselfProductItselfOverallPrice[i].textContent = '$' + totalPriceOfOneProduct.toFixed(2);
                 cartItselfProductTimesText[i].textContent = productCounter + 'x';
-            } else {
-                isAddedToCart = false;
-                productItselfAddToCartButton[i].style.display = 'flex';
-                productItselfIcrementDecrementButtonsContainer[i].style.display = 'none';
             };
         });
 
