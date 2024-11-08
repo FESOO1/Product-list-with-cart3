@@ -3,6 +3,7 @@ const productItself = document.querySelectorAll('.product-itself');
 const productItselfImage = document.querySelectorAll('.product-itself-image-itself');
 const productItselfAddToCartButton = document.querySelectorAll('.product-itself-add-to-cart-button');
 const productItselfIcrementDecrementButtonsContainer = document.querySelectorAll('.product-itself-buttons-increment-decrement-buttons');
+const productItselfIcrementDecrementOutputText = document.querySelectorAll('.product-itself-buttons-increment-decrement-output');
 const productItselfDecrementButton = document.querySelectorAll('.product-itself-buttons-decrement-button');
 const productItselfIncrementButton = document.querySelectorAll('.product-itself-buttons-increment-button');
 const productItselfTextCategory = document.querySelectorAll('.product-itself-text-category');
@@ -41,7 +42,17 @@ for (let i = 0; i < productItselfAddToCartButton.length; i++) {
 
 
     // INCREMENT AND DECREMENT BUTTONS
-    let productCounter = 0;
+    let productCounter = 1;
+
+    // DECREMENT BUTTON
+    productItselfDecrementButton[i].addEventListener('click', () => {
+        productCounter--;
+        productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+    });
 
     // INCREMENT BUTTON
+    productItselfIncrementButton[i].addEventListener('click', () => {
+        productCounter++;
+        productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+    });
 };
