@@ -103,9 +103,6 @@ body {
     border: 1px solid hsl(12, 20%, 44%);
     cursor: pointer;
     background-color: white;
-
-
-    display: none;
 }
 
 .product-itself-add-to-cart-button-text {
@@ -130,7 +127,8 @@ body {
     height: 50px;
     border-radius: 2rem;
     background-color: hsl(14, 86%, 42%);
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding-inline: 12px;
