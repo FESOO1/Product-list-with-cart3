@@ -93,6 +93,16 @@ async function displayData(productJson) {
                     cartItselfProductsThemselves.removeChild(cartItselfProductDivider[i]);
                     numberOfProducts--;
                     cartItselfNumberOfProductsText.textContent = numberOfProducts;
+
+                    // SHOWING THE ADD TO CART BUTTON IF THE PRODUCT IS REMOVED.
+                    /* productItselfAddToCartButton[i].style.display = 'flex';
+                    productItselfIcrementDecrementButtonsContainer[i].style.display = 'none'; */
+
+                    // SHOWING THE EMPTY CONTAINER IF THERE IS NO PRODUCT IN THE CART.
+                    if (numberOfProducts === 0) {
+                        cartItselfEmptyContainer.style.display = 'flex';
+                        cartItselfProductContainer.style.display = 'none';
+                    };
                 });
             };
         });
