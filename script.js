@@ -38,4 +38,10 @@ for (let i = 0; i < productItselfAddToCartButton.length; i++) {
         productItselfAddToCartButton[i].style.display = 'none';
         productItselfIcrementDecrementButtonsContainer[i].style.display = 'flex';
     });
+
+
+    // INCREMENT AND DECREMENT BUTTONS
+    let productCounter = 0;
+
+    // INCREMENT BUTTON
 };
