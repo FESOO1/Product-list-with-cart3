@@ -103,6 +103,9 @@ body {
     border: 1px solid hsl(12, 20%, 44%);
     cursor: pointer;
     background-color: white;
+
+
+    display: none;
 }
 
 .product-itself-add-to-cart-button-text {
@@ -118,6 +121,54 @@ body {
     color: hsl(14, 86%, 42%);
 }
 
+/* PRODUCT ITSELF BUTTONS - INCREMENT DECREMENT BUTTONS CONTAINER */
+
+.product-itself-buttons-increment-decrement-buttons {
+    position: absolute;
+    top: -25px;
+    width: 70%;
+    height: 50px;
+    border-radius: 2rem;
+    background-color: hsl(14, 86%, 42%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 12px;
+}
+
+/* DECREMENT NUMBER BUTTON */
+
+.product-itself-buttons-decrement-button {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.product-itself-buttons-decrement-button-svg {
+    color: white;
+}
+
+.product-itself-buttons-decrement-button:hover {
+    background-color: white;
+}
+
+.product-itself-buttons-decrement-button:hover .product-itself-buttons-decrement-button-svg {
+    color: hsl(14, 86%, 42%);
+}
+
+/* INCREMENT DECREMENT OUTPUT TEXT */
+
+.product-itself-buttons-increment-decrement-output {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
 
 /*
 
