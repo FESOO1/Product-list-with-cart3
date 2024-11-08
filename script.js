@@ -72,7 +72,7 @@ async function displayData(productJson) {
                         </div>
                     </div>
                     <div class="cart-itself-product-itself-right">
-                        <button class="cart-itself-product-itself-right-delete-button">
+                        <button type="button" class="cart-itself-product-itself-right-delete-button">
                             <svg class="cart-itself-product-itself-right-delete-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
                             <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -81,6 +81,20 @@ async function displayData(productJson) {
                 </div>
                 <hr class="cart-itself-product-divider">
             `;
+
+            // DELETE A PRODUCT
+            const cartItselfProductItself = document.querySelectorAll('.cart-itself-product-itself');
+            const cartItselfProductDivider = document.querySelectorAll('.cart-itself-product-divider');
+            const deleteProductButton = document.querySelectorAll('.cart-itself-product-itself-right-delete-button');
+
+            for (let i = 0; i < cartItselfProductItself.length; i++) {
+                deleteProductButton[i].addEventListener('click', () => {
+                    cartItselfProductsThemselves.removeChild(cartItselfProductItself[i]);
+                    cartItselfProductsThemselves.removeChild(cartItselfProductDivider[i]);
+                    numberOfProducts--;
+                    cartItselfNumberOfProductsText.textContent = numberOfProducts;
+                });
+            };
         });
 
 
