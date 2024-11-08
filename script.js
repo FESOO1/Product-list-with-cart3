@@ -52,7 +52,7 @@ async function displayData() {
         // PRODUCT ADD TO CART BUTTON
         let isAddedToCart = false;
         let productCounter = 1;
-        let totalPriceOfOneProduct = productCounter * productData[i].price;
+        let totalPriceOfOneProduct;
 
         productItselfAddToCartButton[i].addEventListener('click', () => {
             isAddedToCart = true;
@@ -70,6 +70,9 @@ async function displayData() {
             // DISPLAYING THE PRODUCT IN THE CART
             cartItselfProductItself[i].classList.add('cart-itself-product-itself-active');
             cartItselfProductDivider[i].classList.add('cart-itself-product-divider-active');
+            cartItselfProductItselfName[i].textContent = productData[i].name;
+            cartItselfProductItselfPrice[i].textContent = '$' + productData[i].price.toFixed(2);
+            cartItselfProductItselfOverallPrice[i].textContent = '$' + productData[i].price.toFixed(2);
         });
 
 
@@ -80,6 +83,10 @@ async function displayData() {
             if (productCounter > 1) {
                 productCounter--;
                 productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+                
+                totalPriceOfOneProduct = productCounter * productData[i].price;
+                cartItselfProductItselfOverallPrice[i].textContent = '$' + totalPriceOfOneProduct.toFixed(2);
+                cartItselfProductTimesText[i].textContent = productCounter + 'x';
             } else {
                 isAddedToCart = false;
                 productItselfAddToCartButton[i].style.display = 'flex';
@@ -91,6 +98,10 @@ async function displayData() {
         productItselfIncrementButton[i].addEventListener('click', () => {
             productCounter++;
             productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+
+            totalPriceOfOneProduct = productCounter * productData[i].price;
+            cartItselfProductItselfOverallPrice[i].textContent = '$' + totalPriceOfOneProduct.toFixed(2);
+            cartItselfProductTimesText[i].textContent = productCounter + 'x';
         });
     };
 };
