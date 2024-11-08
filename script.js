@@ -24,6 +24,6 @@ async function displayData() {
         // PRODUCT TEXT
         productItselfTextCategory[i].textContent = productData[i].category;
         productItselfTextName[i].textContent = productData[i].name;
-        productItselfTextPrice[i].textContent = productData[i].price.toFixed(2);
+        productItselfTextPrice[i].textContent = '$'  + productData[i].price.toFixed(2);
     };
 };
