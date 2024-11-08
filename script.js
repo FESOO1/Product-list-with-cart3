@@ -82,6 +82,7 @@ async function displayData() {
 
                 productItselfAddToCartButton[i].style.display = 'flex';
                 productItselfIcrementDecrementButtonsContainer[i].style.display = 'none';
+                isAddedToCart = false;
 
                 // NUMBER OF PRODUCTS TEXT
                 numberOfProducts--;
