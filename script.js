@@ -11,6 +11,14 @@ const productItselfTextName = document.querySelectorAll('.product-itself-text-na
 const productItselfTextPrice = document.querySelectorAll('.product-itself-text-price');
 
 // CART
+const cartItselfProductItself = document.querySelectorAll('.cart-itself-product-itself');
+const cartItselfProductItselfName = document.querySelectorAll('.cart-itself-product-itself-left-text');
+const cartItselfProductTimesText = document.querySelectorAll('.cart-itself-product-itself-left-inner-times-text');
+const cartItselfProductItselfPrice = document.querySelectorAll('.cart-itself-product-itself-left-inner-times-price');
+const cartItselfProductItselfOverallPrice = document.querySelectorAll('.cart-itself-product-itself-left-inner-times-overall-price');
+const cartItselfProductItselfDeleteButton = document.querySelectorAll('.cart-itself-product-itself-right-delete-button');
+
+const cartItselfProductDivider = document.querySelectorAll('.cart-itself-product-divider');
 const cartItselfEmptyContainer = document.querySelector('.cart-itself-empty');
 const cartItselfProductContainer = document.querySelector('.cart-itself-product-container');
 const cartItselfProductsThemselves = document.querySelector('.cart-itself-products-themselves');
@@ -22,7 +30,7 @@ let numberOfProducts = 0;
 
 window.addEventListener('DOMContentLoaded', displayData);
 
-async function displayData(productJson) {
+async function displayData() {
     const response = await fetch('./data.json');
     const productData = await response.json();
 
@@ -59,48 +67,9 @@ async function displayData(productJson) {
             cartItselfEmptyContainer.style.display = 'none';
             cartItselfProductContainer.style.display = 'flex';
 
-            // FETCHING DATA FROM THE JSON FILE
-
-            /* cartItselfProductsThemselves.innerHTML += `
-                <div class="cart-itself-product-itself">
-                    <div class="cart-itself-product-itself-left">
-                        <h4 class="cart-itself-product-itself-left-text">Classic Tiramisu</h4>
-                        <div class="cart-itself-product-itself-left-inner">
-                            <h5 class="cart-itself-product-itself-left-inner-times-text">${productCounter}x</h5>
-                            <h5 class="cart-itself-product-itself-left-inner-times-price">$${productData[i].price.toFixed(2)}</h5>
-                            <h5 class="cart-itself-product-itself-left-inner-times-overall-price">$${totalPriceOfOneProduct.toFixed(2)}</h5>
-                        </div>
-                    </div>
-                    <div class="cart-itself-product-itself-right">
-                        <button type="button" class="cart-itself-product-itself-right-delete-button">
-                            <svg class="cart-itself-product-itself-right-delete-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                            <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        </button>
-                    </div>
-                </div>
-                <hr class="cart-itself-product-divider">
-            `; */
-
-            /* // DELETE A PRODUCT
-            const cartItselfProductItself = document.querySelectorAll('.cart-itself-product-itself');
-            const cartItselfProductDivider = document.querySelectorAll('.cart-itself-product-divider');
-            const deleteProductButton = document.querySelectorAll('.cart-itself-product-itself-right-delete-button');
-
-            for (let i = 0; i < cartItselfProductItself.length; i++) {
-                deleteProductButton[i].addEventListener('click', () => {
-                    cartItselfProductsThemselves.removeChild(cartItselfProductItself[i]);
-                    cartItselfProductsThemselves.removeChild(cartItselfProductDivider[i]);
-                    numberOfProducts--;
-                    cartItselfNumberOfProductsText.textContent = numberOfProducts;
-
-                    // SHOWING THE EMPTY CONTAINER IF THERE IS NO PRODUCT IN THE CART.
-                    if (numberOfProducts === 0) {
-                        cartItselfEmptyContainer.style.display = 'flex';
-                        cartItselfProductContainer.style.display = 'none';
-                    };
-                });
-            }; */
+            // DISPLAYING THE PRODUCT IN THE CART
+            cartItselfProductItself[i].classList.add('cart-itself-product-itself-active');
+            cartItselfProductDivider[i].classList.add('cart-itself-product-divider-active');
         });
 
 

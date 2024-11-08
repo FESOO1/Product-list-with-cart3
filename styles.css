@@ -288,16 +288,25 @@ body {
 /* CART ITSELF PRODUCT DIVIDER */
 
 .cart-itself-product-divider {
+    display: none;
     border: 0;
     border-top: 1px solid hsl(13, 31%, 94%);
+}
+
+.cart-itself-product-divider-active {
+    display: unset;
 }
 
 /* CART ITSELF PRODUCT ITSELF */
 
 .cart-itself-product-itself {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
+}
+
+.cart-itself-product-itself-active {
+    display: flex;
 }
 
 /* CART ITSELF PRODUCT ITSELF LEFT */
