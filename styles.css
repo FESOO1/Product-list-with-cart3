@@ -231,3 +231,41 @@ body {
 .cart-container {
     width: 400px;
 }
+
+/* CART ITSELF */
+
+.cart-itself {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* CART ITSELF TEXT */
+
+.cart-itself-text {
+    display: flex;
+    align-items: center;
+}
+
+.cart-itself-text-itself {
+    color: hsl(14, 86%, 42%);
+}
+
+/* CART ITSELF EMPTY */
+
+.cart-itself-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 30px;
+    row-gap: 5px;
+}
+
+.cart-itself-empty-paragraph {
+    font-weight: 500;
+    color: hsl(12, 20%, 44%);
+}
