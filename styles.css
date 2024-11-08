@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --f-all: "Red Hat Text", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--f-all);
+}
+
+body {
+    background-color: hsl(13, 31%, 94%);
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 80px 100px;
+    column-gap: 40px;
+}
+
+/*
+
+    PRODUCTS CONTAINER
+
+*/
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+/* PRODUCTS TEXT */
+
+.products-text {
+    display: flex;
+}
+
+.products-text-itself {
+    font-size: 2.5rem;
+    color: hsl(14, 65%, 9%);
+}
+
+/* PRODUCTS THEMSELVES */
+
+.products-themselves {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+}
+
+/* PRODUCT ITSELF */
+
+.product-itself {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PRODUCT ITSELF IMAGE */
+
+.product-itself-image {
+    width: 100%;
+    /* height: 250px; */
+    line-height: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.product-itself-image-itself {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PRODUCT ITSELF BUTTONS */
+
+.product-itself-buttons {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    position: relative;
+}
+
+/* PRODUCT ITSELF BUTTONS - ADD TO CART BUTTON */
+
+.product-itself-add-to-cart-button {
+    position: absolute;
+    top: -25px;
+    width: 70%;
+    height: 50px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    border: 1px solid hsl(12, 20%, 44%);
+    cursor: pointer;
+    background-color: white;
+}
+
+.product-itself-add-to-cart-button-text {
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+
+.product-itself-add-to-cart-button:hover {
+    border: 1px solid hsl(14, 86%, 42%);
+}
+
+.product-itself-add-to-cart-button:hover .product-itself-add-to-cart-button-text {
+    color: hsl(14, 86%, 42%);
+}
+
+
+/*
+
+    CART CONTAINER
+
+*/
+
+.cart-container {
+    width: 400px;
+}
