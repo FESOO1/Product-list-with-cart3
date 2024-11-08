@@ -271,5 +271,93 @@ body {
 /* CART ITSELF PRODUCT CONTAINER */
 
 .cart-itself-product-container {
-    
+    display: flex;
+    flex-direction: column;
+}
+
+/* CART ITSELF PRODUCT DIVIDER */
+
+.cart-itself-product-divider {
+    border: 0;
+    border-top: 1px solid hsl(13, 31%, 94%);
+}
+
+/* CART ITSELF PRODUCT ITSELF */
+
+.cart-itself-product-itself {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+/* CART ITSELF PRODUCT ITSELF LEFT */
+
+.cart-itself-product-itself-left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.cart-itself-product-itself-left-text {
+    color: hsl(14, 65%, 9%);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* CART ITSELF PRODUCT ITSELF LEFT TEXT */
+
+.cart-itself-product-itself-left-inner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.cart-itself-product-itself-left-inner-times-text {
+    color: hsl(14, 86%, 42%);
+    font-size: 0.95rem;
+}
+
+.cart-itself-product-itself-left-inner-times-price {
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.cart-itself-product-itself-left-inner-times-overall-price {
+    color: hsl(12, 20%, 44%);
+    font-size: 0.95rem;
+    font-weight: 650;
+}
+
+/* CART ITSELF PRODUCT ITSELF RIGHT */
+
+.cart-itself-product-itself-right {
+    display: flex;
+    align-items: center;
+}
+
+.cart-itself-product-itself-right-delete-button {
+    width: 22px;
+    height: 22px;
+    border-radius: 2rem;
+    border: 1px solid hsl(12, 20%, 44%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cart-itself-product-itself-right-delete-button-svg {
+    color: hsl(12, 20%, 44%);
+    width: 15px;
+    height: 15px;
+}
+
+.cart-itself-product-itself-right-delete-button:hover {
+    border: 1px solid hsl(14, 65%, 9%);
+}
+
+.cart-itself-product-itself-right-delete-button:hover .cart-itself-product-itself-right-delete-button-svg {
+    color: hsl(14, 65%, 9%);
 }
