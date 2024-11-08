@@ -361,3 +361,23 @@ body {
 .cart-itself-product-itself-right-delete-button:hover .cart-itself-product-itself-right-delete-button-svg {
     color: hsl(14, 65%, 9%);
 }
+
+/* CART ITSELF PRODUCT ORDER TOTAL */
+
+.cart-itself-product-order-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 15px;
+}
+
+.cart-itself-product-order-text {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: hsl(14, 65%, 9%);
+}
+
+.cart-itself-product-order-overall-price {
+    font-size: 1.3rem;
+    color: hsl(14, 65%, 9%);
+}
