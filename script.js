@@ -21,6 +21,10 @@ const cartItselfProductItselfDeleteButton = document.querySelectorAll('.cart-its
 // CART OVERALL PRICE
 const cartItselfOverallPrice = document.querySelector('.cart-itself-product-order-overall-price');
 
+// CONFIRM BUTTON
+
+const cartItselfConfirmButton = document.querySelector('.cart-itself-product-confirm-order-button');
+
 const cartItselfProductDivider = document.querySelectorAll('.cart-itself-product-divider');
 const cartItselfEmptyContainer = document.querySelector('.cart-itself-empty');
 const cartItselfProductContainer = document.querySelector('.cart-itself-product-container');
