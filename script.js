@@ -46,8 +46,10 @@ for (let i = 0; i < productItselfAddToCartButton.length; i++) {
 
     // DECREMENT BUTTON
     productItselfDecrementButton[i].addEventListener('click', () => {
-        productCounter--;
-        productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+        if (productCounter > 1) {
+            productCounter--;
+            productItselfIcrementDecrementOutputText[i].textContent = productCounter;
+        };
     });
 
     // INCREMENT BUTTON
