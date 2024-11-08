@@ -277,6 +277,14 @@ body {
     row-gap: 20px;
 }
 
+/* CART ITSELF PRODUCTS THEMSELVES */
+
+.cart-itself-products-themselves {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
 /* CART ITSELF PRODUCT DIVIDER */
 
 .cart-itself-product-divider {
