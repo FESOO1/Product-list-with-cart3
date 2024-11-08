@@ -198,6 +198,30 @@ body {
     color: hsl(14, 86%, 42%);
 }
 
+/* PRODUCT ITSELF TEXT CONTAINER */
+
+.product-itself-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-itself-text-category {
+    color: hsl(12, 20%, 44%);
+    font-weight: 500;
+}
+
+.product-itself-text-name {
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+
+.product-itself-text-price {
+    color: hsl(14, 86%, 42%);
+    font-weight: 500;
+}
+
+
+
 /*
 
     CART CONTAINER
